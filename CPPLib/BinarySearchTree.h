@@ -13,11 +13,13 @@ public:
 	void InsertNode(int data);
 	void PreOrderTraversal();
 	void InOrderTraversal();
+	void PostOrderTraversal();
 
 private:
 	BinaryTreeNode* m_Root;
 	BinaryTreeNode* insertNode(BinaryTreeNode* node, int data);
 	void preOrderTraversal(BinaryTreeNode* node);
 	void inOrderTraversal(BinaryTreeNode* node);
+	void postOrderTraversal(BinaryTreeNode* node);
 };
 

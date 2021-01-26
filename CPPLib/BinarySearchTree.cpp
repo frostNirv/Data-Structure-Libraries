@@ -65,6 +65,11 @@ void BinarySearchTree::InOrderTraversal()
 	inOrderTraversal(GetRoot());
 }
 
+void BinarySearchTree::PostOrderTraversal()
+{
+	postOrderTraversal(GetRoot());
+}
+
 void BinarySearchTree::inOrderTraversal(BinaryTreeNode* node)
 {
 	if (node == nullptr)
@@ -72,4 +77,13 @@ void BinarySearchTree::inOrderTraversal(BinaryTreeNode* node)
 	inOrderTraversal(node->GetLeftBinaryTreeNode());
 	std::cout << "The value of the node is " << node->GetData() << "." << std::endl;
 	inOrderTraversal(node->GetRightBinaryTreeNode());
+}
+
+void BinarySearchTree::postOrderTraversal(BinaryTreeNode* node)
+{
+	if (node == nullptr)
+		return;
+	postOrderTraversal(node->GetLeftBinaryTreeNode());
+	postOrderTraversal(node->GetRightBinaryTreeNode());
+	std::cout << "The value of the node is " << node->GetData() << "." << std::endl;
 }

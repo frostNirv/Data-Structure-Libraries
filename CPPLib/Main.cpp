@@ -15,6 +15,10 @@ int main()
 	std::cout << "Results in Pre-Order Traversal" << std::endl;
 	std::cout << "-------------------------------" << std::endl;
 	bst->PreOrderTraversal();
+	std::cout << "-------------------------------" << std::endl;
+	std::cout << "Results in Post-Order Traversal" << std::endl;
+	std::cout << "-------------------------------" << std::endl;
+	bst->PostOrderTraversal();
 	delete bst;
 	return 0;
 }
