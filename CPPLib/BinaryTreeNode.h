@@ -20,6 +20,5 @@ public:
 	int m_Data;
 	BinaryTreeNode* m_Left;
 	BinaryTreeNode* m_Right;
-
 };
 
