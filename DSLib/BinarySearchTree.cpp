@@ -17,11 +17,11 @@ void BinarySearchTree::InsertNode(int data)
 	std::cout << "A new node with the value of " << data << " has been created." << std::endl;
 }
 
-BinaryTreeNode* BinarySearchTree::insertNode(BinaryTreeNode* node, int data)
+Node* BinarySearchTree::insertNode(Node* node, int data)
 {
 	if (node == nullptr)
 	{
-		node = new BinaryTreeNode();
+		node = new Node();
 		node->SetData(data);
 		node->SetLeftBinaryTreeNode(nullptr);
 		node->SetRightBinaryTreeNode(nullptr);
@@ -46,7 +46,7 @@ void BinarySearchTree::PreOrderTraversal()
 	preOrderTraversal(GetRoot());
 }
 
-void BinarySearchTree::preOrderTraversal(BinaryTreeNode* node)
+void BinarySearchTree::preOrderTraversal(Node* node)
 {
 	if (node == nullptr)
 		return;
@@ -70,7 +70,7 @@ void BinarySearchTree::PostOrderTraversal()
 	postOrderTraversal(GetRoot());
 }
 
-void BinarySearchTree::inOrderTraversal(BinaryTreeNode* node)
+void BinarySearchTree::inOrderTraversal(Node* node)
 {
 	if (node == nullptr)
 		return;
@@ -79,7 +79,7 @@ void BinarySearchTree::inOrderTraversal(BinaryTreeNode* node)
 	inOrderTraversal(node->GetRightBinaryTreeNode());
 }
 
-void BinarySearchTree::postOrderTraversal(BinaryTreeNode* node)
+void BinarySearchTree::postOrderTraversal(Node* node)
 {
 	if (node == nullptr)
 		return;
