@@ -14,7 +14,6 @@ BinarySearchTree::~BinarySearchTree()
 void BinarySearchTree::InsertNode(int data)
 {
 	SetRoot(insertNode(GetRoot(), data));
-	std::cout << "A new node with the value of " << data << " has been created." << std::endl;
 }
 
 Node* BinarySearchTree::insertNode(Node* node, int data)
